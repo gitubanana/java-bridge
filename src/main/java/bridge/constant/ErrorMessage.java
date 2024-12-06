@@ -7,6 +7,7 @@ public enum ErrorMessage {
     NOT_A_NUMBER("숫자가 아닙니다."),
     TOO_SHORT_BRIDGE_SIZE("다리의 길이는 " + MIN_BRIDGE_SIZE + "이상이어야 합니다"),
     TOO_LONG_BRIDGE_SIZE("다리의 길이는 " + MAX_BRIDGE_SIZE + "이하여야 합니다"),
+    INVALID_ANSWER("올바른 답변을 입력해주세요."),
     ;
 
     private static final String ERROR_PREFIX = "[ERROR] ";
