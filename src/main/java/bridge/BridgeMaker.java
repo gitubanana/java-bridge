@@ -1,5 +1,9 @@
 package bridge;
 
+import static bridge.constant.BridgeProperty.DOWN_NUMBER;
+import static bridge.constant.BridgeProperty.DOWN_STRING;
+import static bridge.constant.BridgeProperty.UP_STRING;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,11 +11,6 @@ import java.util.List;
  * 다리의 길이를 입력 받아서 다리를 생성해주는 역할을 한다.
  */
 public class BridgeMaker {
-    public static final int DOWN_NUMBER = 0;
-    public static final int UP_NUMBER = 1;
-    public static final String DOWN_STRING = "D";
-    public static final String UP_STRING = "U";
-
     private final BridgeNumberGenerator bridgeNumberGenerator;
 
     public BridgeMaker(BridgeNumberGenerator bridgeNumberGenerator) {

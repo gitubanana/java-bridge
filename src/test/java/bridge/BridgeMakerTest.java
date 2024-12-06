@@ -1,5 +1,9 @@
 package bridge;
 
+import static bridge.constant.BridgeProperty.DOWN_NUMBER;
+import static bridge.constant.BridgeProperty.DOWN_STRING;
+import static bridge.constant.BridgeProperty.UP_NUMBER;
+import static bridge.constant.BridgeProperty.UP_STRING;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.util.Lists.newArrayList;
 
@@ -26,16 +30,16 @@ public class BridgeMakerTest {
     static Stream<Arguments> getBridgeMakerArguments() {
         return Stream.of(
                 Arguments.of(
-                        List.of(BridgeMaker.UP_NUMBER, BridgeMaker.UP_NUMBER),
-                        List.of(BridgeMaker.UP_STRING, BridgeMaker.UP_STRING)
+                        List.of(UP_NUMBER, UP_NUMBER),
+                        List.of(UP_STRING, UP_STRING)
                 ),
                 Arguments.of(
-                        List.of(BridgeMaker.UP_NUMBER, BridgeMaker.DOWN_NUMBER, BridgeMaker.DOWN_NUMBER),
-                        List.of(BridgeMaker.UP_STRING, BridgeMaker.DOWN_STRING, BridgeMaker.DOWN_STRING)
+                        List.of(UP_NUMBER, DOWN_NUMBER, DOWN_NUMBER),
+                        List.of(UP_STRING, DOWN_STRING, DOWN_STRING)
                 ),
                 Arguments.of(
-                        List.of(BridgeMaker.DOWN_NUMBER, BridgeMaker.DOWN_NUMBER, BridgeMaker.UP_NUMBER),
-                        List.of(BridgeMaker.DOWN_STRING, BridgeMaker.DOWN_STRING, BridgeMaker.UP_STRING)
+                        List.of(DOWN_NUMBER, DOWN_NUMBER, UP_NUMBER),
+                        List.of(DOWN_STRING, DOWN_STRING, UP_STRING)
                 )
         );
     }
